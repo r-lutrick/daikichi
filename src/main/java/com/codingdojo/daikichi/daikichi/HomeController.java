@@ -16,7 +16,7 @@ public class HomeController {
     @RequestMapping("/lotto/{number}")
     public String lotto(@PathVariable("number") Integer number) {
         String even = "You will take a grand journey in the near future, but be wary of tempting offers.";
-        String odd = "You will take a grand journey in the near future, but be wary of tempting offers.";
+        String odd = "You have enjoyed the fruits of your labor but now is a great time to spend time with family and friends.";
         return number % 2 == 0 ? even : odd;
     }
 }
