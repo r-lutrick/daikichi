@@ -8,6 +8,22 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/daikichi")
 public class HomeController {
 
+
+    @RequestMapping("/")
+    public String welcome(){
+        return "Welcome";
+    }
+    
+    @RequestMapping("/today")
+    public String today(){
+        return "Today you will find luck in all your endeavors!";
+    }
+
+    @RequestMapping("/today")
+    public String tomorrow(){
+        return "Tomorrow, an opportunity will arise, so be sure to be open to new ideas!";
+    }
+
     @RequestMapping("/travel/{location}")
     public String travel(@PathVariable("location") String location) {
         return "Congratulations! You will soon travel to " + location;
